@@ -2,6 +2,7 @@
   "name": "electron-react-starter",
   "version": "0.1.0",
   "private": true,
+  "main": "src/electron-starter.ts",
   "dependencies": {
     "@types/jest": "24.0.11",
     "@types/node": "11.13.6",
@@ -13,9 +14,11 @@
     "typescript": "3.4.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently 'cross-env BROWSER=none yarn start-react' 'wait-on http://localhost:3000 && yarn start-electron'",
+    "start-react": "$(npm bin)/react-scripts start",
+    "start-electron": "cross-env ELECTRON_DEV=1 $(npm bin)/electron .",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -26,5 +29,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "electron": "^4.1.4",
+    "wait-on": "^3.2.0"
+  }
 }
