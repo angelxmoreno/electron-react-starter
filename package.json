@@ -18,8 +18,7 @@
     "start-react": "$(npm bin)/react-scripts start",
     "start-electron": "cross-env ELECTRON_DEV=1 $(npm bin)/electron .",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom"
   },
   "eslintConfig": {
     "extends": "react-app"

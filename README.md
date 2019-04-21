@@ -1,10 +1,17 @@
+# Electron-React-Starter
+This project was inspired from the following blog posts
+
+- [How to build an Electron app using create-react-app. No webpack configuration or “ejecting” necessary](https://medium.freecodecamp.org/building-an-electron-application-with-create-react-app-97945861647c)
+- [Using Electron with React: The Basics](https://medium.com/@brockhoff/using-electron-with-react-the-basics-e93f9761f86f)
+- [Takeaways on Building a React Based App with Electron](https://getstream.io/blog/takeaways-on-building-a-react-based-app-with-electron/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start-react`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,12 +19,21 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
+### `yarn start-electron`
+
+Starts the Electron desktop version of the app and points to [http://localhost:3000](http://localhost:3000).
+
+### `yarn start`
+
+Runs the app in the development mode on localhost:3000](http://localhost:3000) but does not open a browser window. After the dev server is loaded it starts the Electron desktop version of the app and points to [http://localhost:3000](http://localhost:3000).
+
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+```
+### `yarn run build` **needs to be reworded for building electron apps
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -26,19 +42,30 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# ToDos
+- add more dev Vs prod utilities and scripts
+- add react-redux https://react-redux.js.org/introduction/quick-start
+- add redux-logic https://github.com/jeffbski/redux-logic
+- add electron-redux https://github.com/hardchor/electron-redux
+- add redux-electron-store https://www.npmjs.com/package/redux-electron-store
+- add type-safe-actions https://github.com/piotrwitek/typesafe-actions
+- Add react-router https://reacttraining.com/react-router/
+- Add react-desktop https://reactdesktop.js.org/docs/getting-started/installation
+- add electron about page https://www.npmjs.com/package/about-window
+- add eletron is https://github.com/delvedor/electron-is
+- add electron log https://github.com/megahertz/electron-log
+- add react-grid-system https://github.com/JSxMachina/react-grid-system
+- choose a UI Kit
+	- Photon https://github.com/connors/photon
+	- React PhotonKit https://github.com/react-photonkit/react-photonkit
+	- react-desktop https://github.com/gabrielbull/react-desktop
+	- XEL https://xel-toolkit.org/
+	- Blue Print https://blueprintjs.com
+- choose a db storage mechanism
+	- RxDB https://rxdb.info/install.html
+	- ~~NeDB https://github.com/louischatriot/nedb~~ LinvoDB https://github.com/Ivshti/linvodb3
+	- electronDb https://www.npmjs.com/package/electron-db
+	- SQLite + Sequelize https://medium.com/getstation/what-we-learned-from-data-persistence-in-our-growing-electron-app-72c9ad19fce
+- figure aout build process and add instructions
