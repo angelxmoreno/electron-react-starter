@@ -2,23 +2,35 @@
   "name": "electron-react-starter",
   "version": "0.1.0",
   "private": true,
-  "main": "src/electron-starter.ts",
+  "main": "public/electron-starter.js",
+  "homepage": "./",
   "dependencies": {
+    "@craco/craco": "^4.1.0",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.6",
     "@types/react": "16.8.14",
     "@types/react-dom": "16.8.4",
+    "@types/react-redux": "^7.0.8",
+    "electron-is-dev": "^1.1.0",
+    "electron-redux": "^1.3.1",
+    "electron-store": "^3.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.0.2",
     "react-scripts": "2.1.8",
+    "redux-logic": "^2.1.1",
+    "redux-persist": "^5.10.0",
+    "redux-persist-electron-storage": "^2.1.0",
+    "reselect": "^4.0.0",
+    "typesafe-actions": "^4.0.0",
     "typescript": "3.4.4"
   },
   "scripts": {
     "start": "concurrently 'cross-env BROWSER=none yarn start-react' 'wait-on http://localhost:3000 && yarn start-electron'",
-    "start-react": "$(npm bin)/react-scripts start",
-    "start-electron": "cross-env ELECTRON_DEV=1 $(npm bin)/electron .",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom"
+    "start-react": "$(npm bin)/craco start",
+    "start-electron": "cross-env ELECTRON_DEV=1 ELECTRON_START_URL=http://localhost:3000 ELECTRON_ENABLE_SECURITY_WARNINGS=0 $(npm bin)/electron .",
+    "build": "craco build",
+    "test": "craco test --env=jsdom"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,6 +45,8 @@
     "concurrently": "^4.1.0",
     "cross-env": "^5.2.0",
     "electron": "^4.1.4",
+    "electron-devtools-installer": "^2.2.4",
+    "redux-devtools-extension": "^2.13.8",
     "wait-on": "^3.2.0"
   }
 }

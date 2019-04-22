@@ -13,7 +13,3 @@ export const initialState: AppState = {
 export const rootReducer = combineReducers<AppState>({
     counter: counterReducer
 })
-
-
-
-

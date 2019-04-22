@@ -1,24 +1,11 @@
-import { CounterState, CounterActionTypes, INCREMENT, DECREMENT } from './types';
+import { CounterState, CounterActionTypes } from './types';
+import { createReducer } from 'typesafe-actions';
+import { incrementAction, decrementAction } from './actions';
 
 export const initialState: CounterState = {
-    count: 5
+    count: 0
 }
 
-export function reducer(state: CounterState = initialState, action: CounterActionTypes): CounterState {
-    switch (action.type) {
-        case INCREMENT:
-            return {
-                ...state,
-                count: state.count + 1
-            }
-
-        case DECREMENT:
-            return {
-                ...state,
-                count: state.count - 1
-            }
-
-        default:
-            return state
-    }
-}
+export const reducer = createReducer<CounterState, CounterActionTypes>(initialState)
+    .handleAction(incrementAction, (state: CounterState) => ({...state, count: state.count + 1}))
+    .handleAction(decrementAction, (state: CounterState) => ({...state, count: state.count - 1}))

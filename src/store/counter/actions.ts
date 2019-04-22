@@ -1,15 +1,6 @@
-import { CounterActionTypes, INCREMENT, DECREMENT } from './types';
+import { INCREMENT, DECREMENT } from './types';
+import { createStandardAction } from 'typesafe-actions';
 
-export function incrementAction(): CounterActionTypes {
-    return {
-        type: INCREMENT
-    }
-}
-
-export function decrementAction(): CounterActionTypes {
-    return {
-        type: DECREMENT
-    }
-}
-
+export const incrementAction = createStandardAction(INCREMENT)()
+export const decrementAction = createStandardAction(DECREMENT)()
 

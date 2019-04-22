@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { AppState } from './store/rootReducers';
-import { connect, MapDispatchToProps } from 'react-redux';
+import { connect } from 'react-redux';
 import { incrementAction, decrementAction } from './store/counter/actions';
 import { getCounter } from './store/counter/selectors';
 import { Dispatch } from 'redux';
@@ -50,7 +50,7 @@ const mapStateToProps = (state: AppState) => ({
   counter: getCounter(state)
 })
 
-const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
+const mapDispatchToProps = (dispatch: Dispatch<void>) => ({
   onIncrementClicked: () => {dispatch(incrementAction())},
   onDecrementClicked: () => {dispatch(decrementAction())}
 })
