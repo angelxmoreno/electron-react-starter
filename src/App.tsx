@@ -1,9 +1,26 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { AppState } from './store/rootReducers';
+import { connect, MapDispatchToProps } from 'react-redux';
+import { incrementAction, decrementAction } from './store/counter/actions';
+import { getCounter } from './store/counter/selectors';
+import { Dispatch } from 'redux';
 
-class App extends Component {
+interface AppProps { }
+
+interface AppStateProps {
+  counter: number
+}
+
+interface AppDispatchProps {
+  onIncrementClicked: ()=>void
+  onDecrementClicked: () => void
+}
+
+class App extends Component<AppProps & AppStateProps & AppDispatchProps> {
   render() {
+    const {counter, onIncrementClicked, onDecrementClicked} = this.props
     return (
       <div className="App">
         <header className="App-header">
@@ -19,10 +36,23 @@ class App extends Component {
           >
             Learn React
           </a>
+          <hr />
+          <button onClick={onIncrementClicked}>Add</button>
+          <span>Counter: {counter}</span>
+          <button onClick={onDecrementClicked}>Remove</button>
         </header>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state: AppState) => ({
+  counter: getCounter(state)
+})
+
+const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
+  onIncrementClicked: () => {dispatch(incrementAction())},
+  onDecrementClicked: () => {dispatch(decrementAction())}
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
