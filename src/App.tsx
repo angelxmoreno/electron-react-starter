@@ -1,58 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import { AppState } from './store/rootReducers';
-import { connect } from 'react-redux';
-import { incrementAction, decrementAction } from './store/counter/actions';
-import { getCounter } from './store/counter/selectors';
-import { Dispatch } from 'redux';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-interface AppProps { }
+import CounterPage from './components/Counter'
+import HomePage from './components/Home'
+import NotFound from './components/NotFound'
 
-interface AppStateProps {
-  counter: number
-}
-
-interface AppDispatchProps {
-  onIncrementClicked: ()=>void
-  onDecrementClicked: () => void
-}
-
-class App extends Component<AppProps & AppStateProps & AppDispatchProps> {
-  render() {
-    const {counter, onIncrementClicked, onDecrementClicked} = this.props
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <hr />
-          <button onClick={onIncrementClicked}>Add</button>
-          <span>Counter: {counter}</span>
-          <button onClick={onDecrementClicked}>Remove</button>
-        </header>
-      </div>
-    );
-  }
-}
-
-const mapStateToProps = (state: AppState) => ({
-  counter: getCounter(state)
-})
-
-const mapDispatchToProps = (dispatch: Dispatch<void>) => ({
-  onIncrementClicked: () => {dispatch(incrementAction())},
-  onDecrementClicked: () => {dispatch(decrementAction())}
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default () => (
+  <section>
+    <Router>
+      <Route path="/counter" exact component={CounterPage} />
+      <Route path="/" exact component={HomePage} />
+      <Route component={NotFound} />
+    </Router>
+  </section>
+)
