@@ -18,10 +18,13 @@ const createWindow = async () => {
         show: false,
         width: 800,
         height: 600,
+        'web-preferences': {
+            'web-security': false
+        }
     });
 
-    const startUrl = isDev ?
-        'http://localhost:3000' :
+    const startUrl = process.env.ELECTRON_START_URL ?
+        process.env.ELECTRON_START_URL :
         `file://${path.join(__dirname, '../build/index.html')}`;
 
     console.info(`starting with url ${startUrl}`);
