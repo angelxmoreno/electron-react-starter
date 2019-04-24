@@ -1,8 +1,6 @@
 import { createLogic } from 'redux-logic';
 import { cancelWeatherAction, fulfilledWeatherAction, rejectedWeatherAction, fetchWeatherAction } from './actions';
-import { getType, PayloadAction } from 'typesafe-actions';
-import { AppState } from '../rootReducers';
-import { dispatch } from 'rxjs/internal/observable/range';
+import { getType } from 'typesafe-actions';
 
 const API_KEY = '93b30e44e9d89c58ff497565e0d38e18'
 

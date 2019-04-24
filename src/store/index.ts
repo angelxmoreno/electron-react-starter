@@ -10,7 +10,7 @@ import { createLogicMiddleware } from 'redux-logic';
 import rootLogics from './rootLogics';
 
 const logicDeps = {}
-const logicMiddleware = createLogicMiddleware(rootLogics as []);
+const logicMiddleware = createLogicMiddleware(rootLogics);
 const composedMiddleware = composeWithDevTools(applyMiddleware(logicMiddleware));
 
 const persistConfig = {

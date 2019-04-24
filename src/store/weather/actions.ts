@@ -1,4 +1,4 @@
-import { FETCH_WEATHER, FETCH_WEATHER_CANCEL, FETCH_WEATHER_FULFILLED, FETCH_WEATHER_REJECTED } from './types';
+import { FETCH_WEATHER, FETCH_WEATHER_CANCEL, FETCH_WEATHER_FULFILLED, FETCH_WEATHER_REJECTED } from './constants';
 import { createStandardAction } from 'typesafe-actions';
 
 export const fetchWeatherAction = createStandardAction(FETCH_WEATHER)<string>()

@@ -5,7 +5,6 @@ import { fulfilledWeatherAction, rejectedWeatherAction, fetchWeatherAction } fro
 export const weatherReducer = (state: WeatherState = WeatherStateInit, action: WeatherActions) => {
     state = { ...state, status: action.type, error: undefined }
 
-    console.log('action',action)
     switch (action.type) {
         case getType(fetchWeatherAction):
             return { ...state, info: undefined }

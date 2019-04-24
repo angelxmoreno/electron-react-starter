@@ -1,4 +1,3 @@
-// import { State } from '../reducers'
 import { createSelector } from 'reselect'
 import { CounterState } from './types';
 import { AppState } from '../rootReducers';

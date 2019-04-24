@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from './types';
+import { INCREMENT, DECREMENT } from './constants';
 import { createStandardAction } from 'typesafe-actions';
 
 export const incrementAction = createStandardAction(INCREMENT)()
