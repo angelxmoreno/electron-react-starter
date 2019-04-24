@@ -46,19 +46,12 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 # ToDos
 - add more dev Vs prod utilities and scripts
-- add react-redux https://react-redux.js.org/introduction/quick-start
 - add redux-logic https://github.com/jeffbski/redux-logic
-- add electron-redux https://github.com/hardchor/electron-redux
-- add redux-electron-store https://www.npmjs.com/package/redux-electron-store
-- add type-safe-actions https://github.com/piotrwitek/typesafe-actions
-- Add react-router https://reacttraining.com/react-router/
-- Add react-desktop https://reactdesktop.js.org/docs/getting-started/installation
 - add electron about page https://www.npmjs.com/package/about-window
 - add eletron is https://github.com/delvedor/electron-is
 - add electron log https://github.com/megahertz/electron-log
 - add react-grid-system https://github.com/JSxMachina/react-grid-system
 - choose a UI Kit
-	- Photon https://github.com/connors/photon
 	- React PhotonKit https://github.com/react-photonkit/react-photonkit
 	- react-desktop https://github.com/gabrielbull/react-desktop
 	- XEL https://xel-toolkit.org/
