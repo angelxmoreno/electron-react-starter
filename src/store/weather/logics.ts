@@ -2,7 +2,7 @@ import { createLogic } from 'redux-logic';
 import { cancelWeatherAction, fulfilledWeatherAction, rejectedWeatherAction, fetchWeatherAction } from './actions';
 import { getType } from 'typesafe-actions';
 
-const API_KEY = '93b30e44e9d89c58ff497565e0d38e18'
+const API_KEY = process.env.REACT_APP_OWM_API_KEY
 
 const fetchWeatherLogic = createLogic({
   type: getType(fetchWeatherAction),
