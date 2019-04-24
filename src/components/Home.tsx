@@ -1,18 +1,11 @@
 import React from 'react';
 import logo from '../logo.svg';
-import Navigation from './Navigation';
+import Layout from './Layout';
 
 const Home = () => (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Welcome to Electron+React Starter
-      </p>
-
-      <Navigation />
-    </header>
-  </div>
+  <Layout title=" Welcome to Electron+React Starter">
+    <img src={logo} className="App-logo" alt="logo" />
+  </Layout>
 );
 
 

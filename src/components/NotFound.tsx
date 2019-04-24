@@ -1,15 +1,9 @@
 import React from 'react';
-import Navigation from './Navigation';
+import Layout from './Layout';
+
 
 const NotFound = () => (
-    <div className="App">
-        <header className="App-header">
-            <p>
-                404 NotFound
-            </p>
-            <Navigation />
-        </header>
-    </div>
+    <Layout title="404 NotFound" />
 );
 
 

@@ -4,7 +4,7 @@ import { Dispatch } from 'redux';
 import { getCounter } from '../store/counter/selectors';
 import { incrementAction, decrementAction } from '../store/counter/actions';
 import { AppState } from '../store/rootReducers';
-import Navigation from './Navigation';
+import Layout from './Layout';
 
 interface CounterProps { }
 
@@ -21,18 +21,11 @@ class Counter extends Component<CounterProps & CounterStateProps & CounterDispat
     render() {
         const { counter, onIncrementClicked, onDecrementClicked } = this.props
         return (
-            <div className="App">
-                <header className="App-header">
-                    <p>
-                        Counter
-                    </p>
-                    <button onClick={onIncrementClicked}>Add</button>
-                    <span>Counter: {counter}</span>
-                    <button onClick={onDecrementClicked}>Remove</button>
-                    <Navigation />
-                </header>
-            </div>
-
+            <Layout title="Counter">
+                <button onClick={onIncrementClicked}>Add</button>
+                <span>Counter: {counter}</span>
+                <button onClick={onDecrementClicked}>Remove</button>
+            </Layout>
         );
     }
 }
