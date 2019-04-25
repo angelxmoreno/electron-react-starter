@@ -18,6 +18,7 @@ const createWindow = async () => {
         show: false,
         width: 800,
         height: 600,
+        minWidth: 768,
         'web-preferences': {
             'web-security': false
         }

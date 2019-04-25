@@ -7,6 +7,13 @@ This project was inspired from the following blog posts
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Stack:
+1. React
+2. Redux
+3. Reselect
+4. ReduxLogic
+5. ReactStrap
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -46,16 +53,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 # ToDos
 - add more dev Vs prod utilities and scripts
-- add redux-logic https://github.com/jeffbski/redux-logic
 - add electron about page https://www.npmjs.com/package/about-window
 - add eletron is https://github.com/delvedor/electron-is
 - add electron log https://github.com/megahertz/electron-log
-- add react-grid-system https://github.com/JSxMachina/react-grid-system
-- choose a UI Kit
-	- React PhotonKit https://github.com/react-photonkit/react-photonkit
-	- react-desktop https://github.com/gabrielbull/react-desktop
-	- XEL https://xel-toolkit.org/
-	- Blue Print https://blueprintjs.com
 - choose a db storage mechanism
 	- RxDB https://rxdb.info/install.html
 	- ~~NeDB https://github.com/louischatriot/nedb~~ LinvoDB https://github.com/Ivshti/linvodb3
