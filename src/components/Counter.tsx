@@ -8,7 +8,7 @@ import Layout from "./Layout/Layout";
 import { Button, ButtonGroup } from "reactstrap";
 import Icon from "./Icon";
 
-interface CounterProps {}
+interface Props {}
 
 interface CounterStateProps {
   counter: number;
@@ -19,9 +19,9 @@ interface CounterDispatchProps {
   onDecrementClicked: () => void;
 }
 
-class Counter extends Component<
-  CounterProps & CounterStateProps & CounterDispatchProps
-> {
+type CounterProps = Props & CounterStateProps & CounterDispatchProps;
+
+class Counter extends Component<CounterProps> {
   render() {
     const { counter, onIncrementClicked, onDecrementClicked } = this.props;
     return (
