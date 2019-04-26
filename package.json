@@ -2,7 +2,7 @@
   "name": "electron-react-starter",
   "version": "0.1.0",
   "private": true,
-  "main": "public/electron-starter.js",
+  "main": "public/electron.js",
   "homepage": "./",
   "dependencies": {
     "@craco/craco": "^4.1.0",
