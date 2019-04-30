@@ -26,6 +26,7 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "reactstrap": "^8.0.0",
+    "redux-db": "1.1.0-beta.0",
     "redux-logic": "^2.1.1",
     "redux-persist": "^5.10.0",
     "redux-persist-electron-storage": "^2.1.0",
@@ -34,9 +35,9 @@
     "typescript": "3.4.4"
   },
   "scripts": {
-    "start": "concurrently 'cross-env BROWSER=none yarn start-react' 'wait-on http://localhost:3000 && yarn start-electron'",
+    "start": "concurrently 'cross-env BROWSER=none yarn start-react' 'wait-on http://localhost:3001 && yarn start-electron'",
     "start-react": "$(npm bin)/craco start",
-    "start-electron": "cross-env ELECTRON_IS_DEV=1 ELECTRON_START_URL=http://localhost:3000 $(npm bin)/electron .",
+    "start-electron": "cross-env ELECTRON_IS_DEV=1 ELECTRON_START_URL=http://localhost:3001 $(npm bin)/electron .",
     "start-prod": "cross-env ELECTRON_IS_DEV=0 $(npm bin)/electron .",
     "build": "craco build",
     "test": "craco test --env=jsdom"

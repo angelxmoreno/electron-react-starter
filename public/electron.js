@@ -6,7 +6,6 @@ const {
 } = require('electron');
 const isDev = require('electron-is-dev');
 const path = require('path')
-const {init} = require('../src/database/index.ts')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -58,7 +57,6 @@ const createWindow = async () => {
 
 
     mainWindow.once('ready-to-show', () => {
-        init()
         mainWindow.show();
 
         ipcMain.on('open-external-window', (event, arg) => {

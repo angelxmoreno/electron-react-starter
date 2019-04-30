@@ -56,9 +56,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - add electron about page https://www.npmjs.com/package/about-window
 - add eletron is https://github.com/delvedor/electron-is
 - add electron log https://github.com/megahertz/electron-log
-- choose a db storage mechanism
-	- RxDB https://rxdb.info/install.html
-	- ~~NeDB https://github.com/louischatriot/nedb~~ LinvoDB https://github.com/Ivshti/linvodb3
-	- electronDb https://www.npmjs.com/package/electron-db
-	- SQLite + Sequelize https://medium.com/getstation/what-we-learned-from-data-persistence-in-our-growing-electron-app-72c9ad19fce
 - figure aout build process and add instructions
